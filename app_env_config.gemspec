@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Simple config loader from yml'
   spec.description   = 'Provide ability to load config from yml files and use it at enviroments configuration files and in whole app'
-  spec.homepage      = 'http://itspark.pro'
+  spec.homepage      = 'https://github.com/sergeyustinov/app_env_config'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
