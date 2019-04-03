@@ -17,11 +17,11 @@ module AppEnvConfig
     def uncached(config_name, with_env = true)
       hash = YAML.load(ERB.new(File.read([root_path, 'config', "#{config_name}.yml"].join('/'))).result)
 
-      res = hash && hash['default'] || {}
+      default = hash && hash['default'] || {}
 
-      hash = res[Rails.env] if with_env
+      hash = hash[Rails.env] if with_env && hash
 
-      (hash ? res.deep_merge(hash) : res).with_indifferent_access
+      (hash ? default.deep_merge(hash) : default).with_indifferent_access
     end
   end
 end

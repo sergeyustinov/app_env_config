@@ -6,3 +6,4 @@
 /pkg/
 /spec/reports/
 /tmp/
+app_env_config-*.gem
